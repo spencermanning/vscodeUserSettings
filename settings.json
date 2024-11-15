@@ -1,0 +1,230 @@
+{
+    "workbench.editor.titleScrollbarSizing": "large",
+    "git.confirmSync": false,
+    "editor.minimap.maxColumn": 40,
+    "editor.minimap.scale": 2,
+    "editor.minimap.size": "fit",
+    "editor.renderLineHighlight": "all",
+    "editor.renderLineHighlightOnlyWhenFocus": false,
+    "highlightLine.borderColor": "gray",
+    "highlightLine.borderWidth": "0px",
+    "window.title": "${separator}${rootPath}",
+    "workbench.editor.wrapTabs": true,
+    "git.ignoreLegacyWarning": true,
+    "cortex-debug.armToolchainPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin",
+    "cortex-debug.gdbPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb-py", // Use this line if I want to use pretty-printer in ~/.gdbinit
+    // "cortex-debug.gdbPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",       // else use this line
+    "[cpp]": {
+
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 12,
+    "editor.detectIndentation": false,
+    "debug.onTaskErrors": "showErrors",
+    "editor.minimap.showSlider": "always",
+    "editor.scrollBeyondLastLine": false,
+    "github-enterprise.uri": "https://git.hw.bits/",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "files.watcherExclude":{
+        "**/build-debug":true,
+        "**/firmware/build-debug":true
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorCustomizations": {
+
+        "editor.wordHighlightBorder": "#cbfa4b",            // Border for all the occurrences of the word that the cursor is in
+        "editor.wordHighlightBackground": "#fc1e1e00",          // Background for "
+        "editor.wordHighlightStrongBackground": "#ff000000",    // Background for OTHER occurrences of currently selected word (only variables being written to)
+        "editor.wordHighlightStrongBorder": "#00ff73",       // Border for "
+        "editor.selectionBackground": "#156868f6",            // Main selection when you drag the cursor over some text
+        "editor.selectionHighlightBackground": "#46085300",   // ALL occurrences when you drag the cursor over some text
+        "editor.selectionHighlightBorder": "#F0FF12",       // Border of OTHER occurrences from cursor selection only
+        // "editor.findMatchBackground": "#058c96",            // Background of currently found word ONLY
+        "editor.findMatchBorder": "#00e1ff3f",                // Border of currently found word ONLY
+        "editor.findMatchHighlightBackground": "#4725df",   // Background of the OTHER occurrences from find search only
+        "terminal.background":"#1D2021",                    // Background of the terminal
+        "terminal.foreground":"#A89984",                    // The text in the terminal
+        // "terminalCursor.background":"#d8eedb",               // Does nothing
+        "terminalCursor.foreground":"#41f031",              // For the terminal
+        "editor.lineHighlightBackground": "#330066",         // Highlight of the whole line currently clicked on
+        "terminal.selectionBackground": "#00ffdd",           // Background while selecting or searching
+        "statusBar.background" : "#1A1A1A",         // remove?
+        "statusBar.noFolderBackground" : "#212121", // remove?
+        "statusBar.debuggingBackground": "#263238",  // remove?
+        "window.activeBorder": "#fcfcfbce",
+        "window.inactiveBorder": "#0cccda",
+        "tab.activeBorder": "#f9f9f9",      // works
+        "tab.activeBorderTop": "#f9f9f9", // works
+        "tab.inactiveModifiedBorder": "#f20505",    // what does this do?
+        "tab.unfocusedInactiveModifiedBorder": "#30f404",   // what does this do?
+        // "minimap.background": "#ff0000",
+        // "minimapSlider.activeBackground": "#ff0000",
+        // "minimapSlider.hoverBackground": "#ff0000",
+        // "scrollbarSlider.activeBackground": "#ff0000",
+        "scrollbarSlider.background": "#fafcfb41", // the color of the scrollbar(also over the minimap)
+        // "scrollbarSlider.hoverBackground": "#ff0000"
+    },
+    "editor.tokenColorCustomizations": { // This section given from Kyle
+
+    // "editor.tokenColorCustomizations": { // This section given from Kyle
+        "textMateRules": [
+    //         {
+    //             "scope": "comment.block", // make block comment slightly different color
+    //             "settings": {
+    //                 "foreground": "#4e7a39" // default #6A9955
+    //             }
+    //         },
+    //         {
+    //             "scope": [
+    //                 "meta.preprocessor", // macros
+    //                 "entity.name.function.preprocessor",
+    //                 "punctuation.definition.decorator.python",
+    //                 "meta.function.decorator.python" // decorators
+    //             ],
+    //             "settings": {
+    //                 "foreground": "#979137"
+    //             }
+    //         },
+            {
+                "scope": [  // overloaded operators for classes
+                    "entity.name.function.operator.cpp",
+                    "entity.name.function.operator.member.cpp"
+                ],
+                "settings": {
+                    "foreground": "#8eeaff65"
+                }
+            },
+    //         {
+    //             "scope": [  // dict braces
+    //                 "punctuation.definition.dict.begin.python",
+    //                 "punctuation.definition.dict.end.python"
+    //             ],
+    //             "settings": {
+    //                 "foreground": "#3ac7ff8e"
+    //             }
+    //         },
+    //         {
+    //             "scope": [ // const vars and enums
+    //                 "variable.other.constant",
+    //                 "variable.other.enummember",
+    //                 "constant.other.placeholder"
+    //             ],
+    //             "settings": {
+    //                 "foreground": "#3882e4"
+    //             }
+    //         },
+    //         {
+    //             "scope": [  // constant vars
+    //                 "variable.other.global.c",
+    //                 "variable.other.global.cpp"
+    //             ],
+    //             "settings": {
+    //                 "foreground": "#00a2ff"
+    //             }
+    //         },
+    //         {
+    //             "scope": [
+    //                 "variable.language.special.self.python",
+    //                 "variable.parameter.function.language.special.self.python",
+    //                 "variable.language.special.cls.python",
+    //                 "variable.parameter.function.language.special.cls.python"
+    //             ],
+    //             "settings": {
+    //                 "foreground": "#7979c4"
+    //             }
+    //     }
+        ]
+    },
+
+    "editor.hover.enabled": true,
+    "explorer.autoReveal": true,
+    "editor.hover.delay": 300,
+    "editor.hover.sticky": false, // To make the hover window disappear when moused-over
+    "terminal.hover.enabled": false,
+    // "editor.parameterHints": true,
+    "search.exclude": { // True means to exclude it. Sometimes doesn't work though.
+        "**/*.html": true,
+        "**/*.s": true,
+        "**/*.S": true,
+        "build-debug": true,
+        // "**/cubemx": false,
+        "build-image0": true,
+        "build-bootloader": true,
+        "gdb.txt": true,
+        "cubemx*": true,
+        "stmdev": false,
+        "stmdev/hal/STM32CubeH7-1.11.1/Drivers/STM32H7xx_HAL_Driver": false // Need to be able to search the HAL files
+    },
+    "search.showLineNumbers": true,
+    "search.sortOrder": "modified",
+    "search.searchOnTypeDebouncePeriod": 100,
+    "search.searchEditor.defaultNumberOfContextLines": 4,
+    "search.mode": "reuseEditor",
+    "files.exclude": {                   // To exclude from the Explorer pane
+        "**/build-debug": false,
+        "**/cubemx": false,
+        "**/build-image?": false,
+        "**/build-bootloader": false,
+        "**/cubemx/Drivers":true,
+        "**/cubemx/Middlewares":true,
+        "**/cubemx/startup_stm32*":true,
+        "**/cubemx/*.ioc":true,
+        "**/cubemx/Makefile":true,
+        "**/cubemx/.mxproject":true,
+    },
+    "git.autofetch": true,
+    "git.detectSubmodules": true,
+    "workbench.list.openMode": "doubleClick",
+    "codestream.disableStrictSSL": true,
+    "window.restoreWindows": "none",
+    "window.reopenFolders": "all",
+    "window.restoreFullscreen": true,
+    "gitlab.instanceUrl": "https://git.hw.bits/",
+    // "cortex-debug.JLinkGDBServerPath": "/opt/stm32/JLink/JLinkGDBServerCLExe",
+    "workbench.tree.indent": 16,
+    "debug.toolBarLocation": "docked",
+    "editor.insertSpaces": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "merge-conflict.diffViewPosition": "Below",
+    "workbench.editor.openPositioning": "last",
+    "update.mode": "manual",
+    "todo-tree.general.statusBar": "total",
+    "todo-tree.tree.showCountsInTree": true,
+    "cmake.configureOnOpen": false,
+    "python.analysis.autoImportCompletions": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "files.autoSaveDelay": 1000,
+    "files.trimTrailingWhitespace": true,
+    "python.linting.pylintArgs": [
+        "--max-line-length=200"
+    ],
+    "editor.renderWhitespace": "all",
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true // Disable line too long warning
+    },
+    "editor.dragAndDrop": false, // turn on or off drag and drop copying
+    "workbench.editor.revealIfOpen": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.autoSave": "afterDelay",
+    "gitlens.codeLens.enabled": true,
+    "window.titleBarStyle": "custom", // to prevent opening same file twice
+    "cortex-debug.liveWatchRefreshRate": 250,
+    "git.openRepositoryInParentFolders": "always",
+    "redhat.telemetry.enabled": false,
+    "gitlens.advanced.blame.sizeThresholdAfterEdit": 6000,
+    "search.maxResults": null,
+    "makefile.configureOnOpen": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+}
