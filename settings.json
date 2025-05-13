@@ -146,7 +146,7 @@
     "editor.hover.enabled": true,
     "explorer.autoReveal": true,
     "editor.hover.delay": 300,
-    "editor.hover.sticky": false, // To make the hover window disappear when moused-over
+    "editor.hover.sticky": false, // Set to false to make the hover (pop-up) window disappear (hide) when moused-over
     "terminal.hover.enabled": false,
     // "editor.parameterHints": true,
     "search.exclude": { // True means to exclude it. Sometimes doesn't work though.
@@ -204,6 +204,7 @@
     "python.analysis.autoImportCompletions": false,
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
+    "pylint.enabled": true,
     "files.autoSaveDelay": 1000,
     "files.trimTrailingWhitespace": true,
     "python.linting.pylintArgs": [
@@ -227,4 +228,41 @@
     "search.maxResults": null,
     "makefile.configureOnOpen": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duo.enabledWithoutGitlabProject": false,
+    "gitlab.duoCodeSuggestions.enabledSupportedLanguages": {
+        "c": false,
+        "cpp": false,
+        "csharp": false,
+        "go": false,
+        "haml": false,
+        "handlebars": false,
+        "java": false,
+        "javascript": false,
+        "javascriptreact": false,
+        "kotlin": false,
+        "python": false,
+        "php": false,
+        "ruby": false,
+        "rust": false,
+        "scala": false,
+        "shellscript": false,
+        "sql": false,
+        "swift": false,
+        "typescript": false,
+        "typescriptreact": false,
+        "svelte": false,
+        "terraform": false,
+        "terragrunt": false,
+        "vue": false
+    },
+    "gitlab.duoCodeSuggestions.openTabsContext": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.keybindingHints.enabled": false,
+    "files.associations": {
+        "Makefile.bl": "makefile",
+        "Makefile.image": "makefile"
+    },
+    "scm.repositories.visible": 15
 }
