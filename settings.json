@@ -8,12 +8,13 @@
     "editor.renderLineHighlightOnlyWhenFocus": false,
     "highlightLine.borderColor": "gray",
     "highlightLine.borderWidth": "0px",
-    "window.title": "${separator}${rootPath}",
+    "window.title": "${activeRepositoryName} - ${folderName}", // To change the top window title
     "workbench.editor.wrapTabs": true,
     "git.ignoreLegacyWarning": true,
-    "cortex-debug.armToolchainPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin",
-    "cortex-debug.gdbPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb-py", // Use this line if I want to use pretty-printer in ~/.gdbinit
-    // "cortex-debug.gdbPath": "/opt/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",       // else use this line
+    "cortex-debug.logLevel": "silly",
+    "cortex-debug.armToolchainPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin",
+    "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb-py", // Use this line if I want to use pretty-printer in ~/.gdbinit
+    // "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",       // else use this line
     "[cpp]": {
 
     "editor.wordBasedSuggestions": "off",
@@ -155,18 +156,22 @@
         "**/*.S": true,
         "build-debug": true,
         // "**/cubemx": false,
-        "build-image0": true,
+        "build-image*": true,
         "build-bootloader": true,
         "gdb.txt": true,
         "cubemx*": true,
         "stmdev": false,
-        "stmdev/hal/STM32CubeH7-1.11.1/Drivers/STM32H7xx_HAL_Driver": false // Need to be able to search the HAL files
+        "stmdev/**": false,
+        "stmdev/hal/STM32CubeH7-1.11.1/Drivers/STM32H7xx_HAL_Driver": false, // Need to be able to search the HAL files
+        "**/libpy": false,
+        "**/hal": true
     },
     "search.showLineNumbers": true,
     "search.sortOrder": "modified",
     "search.searchOnTypeDebouncePeriod": 100,
     "search.searchEditor.defaultNumberOfContextLines": 4,
-    "search.mode": "reuseEditor",
+    "search.mode": "reuseEditor", // to make the global searches appear in a new tab instead of the side window.
+    // "search.mode": "view",           // does the opposite of the above.
     "files.exclude": {                   // To exclude from the Explorer pane
         "**/build-debug": false,
         "**/cubemx": false,
@@ -187,7 +192,7 @@
     "window.reopenFolders": "all",
     "window.restoreFullscreen": true,
     "gitlab.instanceUrl": "https://git.hw.bits/",
-    // "cortex-debug.JLinkGDBServerPath": "/opt/stm32/JLink/JLinkGDBServerCLExe",
+    // "cortex-debug.JLinkGDBServerPath": "/data/stm32/JLink/JLinkGDBServerCLExe",
     "workbench.tree.indent": 16,
     "debug.toolBarLocation": "docked",
     "editor.insertSpaces": true,
@@ -264,5 +269,15 @@
         "Makefile.bl": "makefile",
         "Makefile.image": "makefile"
     },
-    "scm.repositories.visible": 15
+    "scm.repositories.visible": 15,
+    "debug.openDebug": "openOnDebugBreak",
+    "gitlens.graph.minimap.additionalTypes": [
+        "pullRequests",
+        "localBranches"
+    ],
+    "gitblame.inlineMessageEnabled": false,
+    "gitblame.inlineMessageMargin": 5,
+    "gitblame.inlineMessageFormat": "${author.name} (${time.ago}) ${commit.hash, 7} ${commit.summary}",
+    "gitblame.delayBlame": 1000,
+
 }
