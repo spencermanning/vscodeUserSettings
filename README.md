@@ -66,7 +66,7 @@ systemctl --user start vscode-extensions-watcher.service
 systemctl --user status vscode-extensions-watcher.service
 ```
 
-The watcher will automatically commit changes when extensions are installed/removed. You just need to `git push` periodically.
+The watcher will automatically commit and push changes to GitHub when extensions are installed/removed.
 
 ## Other VS Code Locations
 

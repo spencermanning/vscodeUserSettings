@@ -27,10 +27,15 @@ while read -r directory events filename; do
     cd "$REPO_DIR"
     ./update-extensions.sh
 
-    # Auto-commit if there are changes
+    # Auto-commit and push if there are changes
     if ! git diff --quiet extensions.txt; then
         git add extensions.txt
         git commit -m "Auto-update: Extensions changed"
-        echo "Changes committed. Run 'git push' to sync."
+        echo "Changes committed. Pushing to GitHub..."
+        if git push; then
+            echo "✓ Successfully pushed to GitHub"
+        else
+            echo "✗ Push failed - you may need to push manually later"
+        fi
     fi
 done
