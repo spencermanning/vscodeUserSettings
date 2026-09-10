@@ -30,13 +30,43 @@ Any changes made in VS Code are automatically reflected in this repo. Simply com
 
 The `extensions.txt` file lists all installed VS Code extensions.
 
-**Update extensions list after installing new extensions:**
+### Manual Update
 ```bash
 ./update-extensions.sh
 git add extensions.txt
 git commit -m "Update extensions list"
 git push
 ```
+
+### Automatic Update (Optional)
+
+Set up a background watcher that auto-updates `extensions.txt` when extensions change:
+
+**1. Install inotify-tools (requires sudo):**
+```bash
+sudo yum install inotify-tools
+```
+
+**2. Option A - Run manually in background:**
+```bash
+./watch-extensions.sh &
+```
+
+**3. Option B - Run as systemd user service (survives reboots):**
+```bash
+# Install the service
+mkdir -p ~/.config/systemd/user
+cp vscode-extensions-watcher.service ~/.config/systemd/user/
+
+# Enable and start
+systemctl --user enable vscode-extensions-watcher.service
+systemctl --user start vscode-extensions-watcher.service
+
+# Check status
+systemctl --user status vscode-extensions-watcher.service
+```
+
+The watcher will automatically commit changes when extensions are installed/removed. You just need to `git push` periodically.
 
 ## Other VS Code Locations
 

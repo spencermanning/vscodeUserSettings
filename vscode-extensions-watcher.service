@@ -1,0 +1,12 @@
+[Unit]
+Description=VS Code Extensions Auto-Update Watcher
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/home/spencer.manning_cn/personalRepos/vscodeUserSettings/watch-extensions.sh
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
