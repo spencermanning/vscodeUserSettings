@@ -13,8 +13,8 @@
     "git.ignoreLegacyWarning": true,
     "cortex-debug.logLevel": "silly",
     "cortex-debug.armToolchainPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin",
-    "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb-py", // Use this line if I want to use pretty-printer in ~/.gdbinit
-    // "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",       // else use this line
+    // "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb-py", // Use this line if I want to use pretty-printer in ~/.gdbinit
+    "cortex-debug.gdbPath": "/data/stm32/arm.com/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",       // else use this line
     "[cpp]": {
 
     "editor.wordBasedSuggestions": "off",
@@ -144,7 +144,7 @@
         ]
     },
 
-    "editor.hover.enabled": true,
+    "editor.hover.enabled": "on",
     "explorer.autoReveal": true,
     "editor.hover.delay": 300,
     "editor.hover.sticky": false, // Set to false to make the hover (pop-up) window disappear (hide) when moused-over
