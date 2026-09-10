@@ -26,8 +26,8 @@ The `settings.json` file in this repo is a symlink to the actual VS Code setting
 
 Any changes made in VS Code are automatically reflected in this repo.
 
-**With the watcher running:** Changes are automatically committed and pushed to GitHub.  
-**Without the watcher:** Manually commit and push changes as needed.
+**With daily sync enabled:** Settings are automatically committed and pushed once per day (6 PM) if there are changes.  
+**Without daily sync:** Manually commit and push changes as needed.
 
 ## Extensions
 
@@ -57,7 +57,7 @@ dzdo yum install inotify-tools
 
 **3. Option B - Run as systemd user service (survives reboots):**
 ```bash
-# Install the service
+# Install the extension watcher service
 mkdir -p ~/.config/systemd/user
 cp vscode-extensions-watcher.service ~/.config/systemd/user/
 
@@ -65,13 +65,22 @@ cp vscode-extensions-watcher.service ~/.config/systemd/user/
 systemctl --user enable vscode-extensions-watcher.service
 systemctl --user start vscode-extensions-watcher.service
 
+# Install the daily settings sync timer
+cp vscode-daily-settings-sync.service ~/.config/systemd/user/
+cp vscode-daily-settings-sync.timer ~/.config/systemd/user/
+
+# Enable and start the timer
+systemctl --user enable vscode-daily-settings-sync.timer
+systemctl --user start vscode-daily-settings-sync.timer
+
 # Check status
 systemctl --user status vscode-extensions-watcher.service
+systemctl --user list-timers  # See when next settings sync will run
 ```
 
-The watcher will automatically commit and push changes to GitHub when:
-- Extensions are installed/removed
-- VS Code settings are changed
+**Extension watcher:** Automatically commits and pushes when extensions are installed/removed (immediate).
+
+**Settings sync:** Automatically commits and pushes settings changes once per day at 6 PM (if there are any).
 
 ## Other VS Code Locations
 

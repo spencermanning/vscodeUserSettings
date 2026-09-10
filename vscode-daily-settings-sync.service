@@ -1,0 +1,6 @@
+[Unit]
+Description=VS Code Daily Settings Sync
+
+[Service]
+Type=oneshot
+ExecStart=/home/spencer.manning_cn/personalRepos/vscodeUserSettings/daily-settings-sync.sh
