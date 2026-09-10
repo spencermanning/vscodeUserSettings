@@ -1,17 +1,22 @@
-Use the copyFromVSCode.sh script to copy code over to this repo
+# VS Code User Settings
 
-User Settings are saved in:
-Linux:
-~/.config/Code/User/settings.json
+This repo tracks VS Code user settings via symlinks for automatic synchronization.
 
-Windows:
-%APPDATA%\Code\User\settings.json
+## Setup
 
+The `settings.json` file in this repo is a symlink to the actual VS Code settings file:
+- **Linux**: `~/.config/Code/User/settings.json`
+- **Windows**: `%APPDATA%\Code\User\settings.json`
 
-extensions are saved in:
-Linux:
-~/.vscode/extensions
+Any changes made in VS Code are automatically reflected in this repo. Simply commit and push to sync.
 
-Windows:
-C:\Users\YourUsername\.vscode\extensions
+## Other VS Code Locations
+
+**Extensions:**
+- **Linux**: `~/.vscode/extensions`
+- **Windows**: `C:\Users\YourUsername\.vscode\extensions`
+
+**Keybindings:**
+- **Linux**: `~/.config/Code/User/keybindings.json`
+- **Windows**: `%APPDATA%\Code\User\keybindings.json`
 
