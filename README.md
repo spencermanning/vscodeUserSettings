@@ -42,9 +42,9 @@ git push
 
 Set up a background watcher that auto-updates `extensions.txt` when extensions change:
 
-**1. Install inotify-tools (requires sudo):**
+**1. Install inotify-tools (requires dzdo):**
 ```bash
-sudo yum install inotify-tools
+dzdo yum install inotify-tools
 ```
 
 **2. Option A - Run manually in background:**

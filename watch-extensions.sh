@@ -7,7 +7,7 @@ EXTENSIONS_FILE="$REPO_DIR/extensions.txt"
 
 if ! command -v inotifywait &> /dev/null; then
     echo "Error: inotify-tools not installed"
-    echo "Install with: sudo yum install inotify-tools"
+    echo "Install with: dzdo yum install inotify-tools"
     exit 1
 fi
 
