@@ -1,5 +1,5 @@
 [Unit]
-Description=VS Code Extensions Auto-Update Watcher
+Description=VS Code Settings and Extensions Auto-Sync
 After=default.target
 
 [Service]

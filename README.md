@@ -24,7 +24,10 @@ The `settings.json` file in this repo is a symlink to the actual VS Code setting
 - **Linux**: `~/.config/Code/User/settings.json`
 - **Windows**: `%APPDATA%\Code\User\settings.json`
 
-Any changes made in VS Code are automatically reflected in this repo. Simply commit and push to sync.
+Any changes made in VS Code are automatically reflected in this repo.
+
+**With the watcher running:** Changes are automatically committed and pushed to GitHub.  
+**Without the watcher:** Manually commit and push changes as needed.
 
 ## Extensions
 
@@ -66,7 +69,9 @@ systemctl --user start vscode-extensions-watcher.service
 systemctl --user status vscode-extensions-watcher.service
 ```
 
-The watcher will automatically commit and push changes to GitHub when extensions are installed/removed.
+The watcher will automatically commit and push changes to GitHub when:
+- Extensions are installed/removed
+- VS Code settings are changed
 
 ## Other VS Code Locations
 
