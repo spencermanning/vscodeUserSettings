@@ -1,3 +1,4 @@
+anthropic.claude-code
 gitlab.gitlab-workflow
 marus25.cortex-debug
 mcu-debug.debug-tracker-vscode
