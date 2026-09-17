@@ -1,6 +1,7 @@
 anjali.clipboard-history
 anthropic.claude-code
 gitlab.gitlab-workflow
+gruntfuggly.todo-tree
 marus25.cortex-debug
 mcu-debug.debug-tracker-vscode
 mcu-debug.memory-view
